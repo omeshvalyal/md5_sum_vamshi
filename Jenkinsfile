@@ -19,7 +19,7 @@ pipeline {
                                        [$class: 'CloneOption', noTags: false, shallow: true, timeout: 2],
                                        [$class: 'PruneStaleBranch']],
                           submoduleCfg: [],
-                          userRemoteConfigs: [[url:'https://github.com/ncs-krishnavamshi/download_jars.git']]])
+                          userRemoteConfigs: [[url:'https://github.com/omeshvalyal/md5_sum_vamshi.git']]])
             }
         }
         stage('Run command') {
@@ -31,8 +31,8 @@ pipeline {
             steps {
                 script {
                    sh """
-chmod 775 /var/lib/jenkins/workspace/krishnavamshi/copy2.sh
-VERSION=${params.version} /var/lib/jenkins/workspace/krishnavamshi/copy2.sh ${params.version}
+chmod 775 /var/lib/jenkins/workspace/krishnavamshi/copy.sh
+VERSION=${params.version} /var/lib/jenkins/workspace/copy.sh ${params.version}
 """
 
                 }
