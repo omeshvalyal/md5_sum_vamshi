@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                    sh """
-chmod 775 /var/lib/jenkins/workspace/krishnavamshi/copy.sh
+chmod 775 /var/lib/jenkins/workspace/copy.sh
 VERSION=${params.version} /var/lib/jenkins/workspace/copy.sh ${params.version}
 """
 
